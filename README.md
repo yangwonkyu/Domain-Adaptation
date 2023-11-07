@@ -82,4 +82,24 @@ All training runs were run at 100 epochs, 16 batches, pretrained(COCO-128) weigh
 
 ## Data Preprocess
 ### Labels to YOLO format
-YOLO Format
+YOLO Format ![image1](/DATA/exp_image/a.png)
+
+1. Unite all classes under {0: 'Car', 1: 'Van', 2: 'Truck, 3: 'DontCare'}
+   - return int value
+2. Adjust bounding box coordinates(left, right, top bottom) to resized image
+3. Convert bounding box coordinates to x, y, w, h
+4. Normalize bounding box coordinates
+   
+The DATA folder in this repo contains different codes for processing the data. Prepare_BDD100k.py (prepare images and data) Prepare_Kitti.py (prepare images and data)
+
+- VKITTI
+  - Note: VKITTI has a different directory structure where images are separated in different folders(Scene01~Scene20)
+    - Two codes are provided: one for annotations, the other for images Prepare_VKitti_labels.py
+  - Creates one label per image based on [frame][camera_id]
+  - Image + labels from folder [camera01, left-15-degrees, left-30-degrees, right-15-degrees, right-30-degrees] were excluded Prepare_VKitti_images.py
+  - Code to accumulate images contained in separate Scene folders into one directory
+  - Rename files according to
+
+#### etc.
+- resize_images.py -- > resize images to 640*640
+- Draw_BBox --> draws bounding box coordinates from annotation file(useful to check if labels were converted properly)
