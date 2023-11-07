@@ -18,4 +18,6 @@ Virtual Kitti(VKITTI) offers synthetic object detection data, produced with Unit
 > YOLOv5 trained on KITTI + VKITTI performs well on KITTI, however, suffers difficulty in detecting in environments not offered by VKITTI nor KITTI.
 > Scenes where the model trained with KITTI + VKITTI showed difficulty in detection
 
-
+![image1](/DATA/epx_image/image1.png)
+![image2](/DATA/epx_image/image2.png)
+![image3](/DATA/epx_image/image3.png)
