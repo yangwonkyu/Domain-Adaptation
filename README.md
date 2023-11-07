@@ -65,5 +65,15 @@ init_method[style, content, random(gaussian or white noise)]
 
 |night|fog|rain|sunset|
 |---|---|---|---|
-|1|2|3|4|
+|![image1](/DATA/exp_image/night.png)|![image1](/DATA/exp_image/fog.png)|![image1](/DATA/exp_image/rain.png)|![image1](/DATA/exp_image/sunset.png)|
+
+### Object detection: YOLOv5m6
+
+- We tried YOLOv5m6 and YOLOl6, however, found that YOLOl6 took too long in our environment. YOLOv5m6 was the best model that matched our conditions.
+All training runs were run at 100 epochs, 16 batches, pretrained(COCO-128) weights offered by Ultralytics.
+- We ran each dataset with different hyperparameters but found the default settings of Ultralytics worked best(Perhaps 100 epochs was not enough).
+- In short, our experiment with domain adaptation through neural style transfer failed.
+- When trained with KITTI + VKITTI Clone + VKITTI Clone NST, it scored a mAP.50 of .820 during validation.
+- When validated on BDD100k, the results were a terrible mAP.50 .142. (The need to proceed on this experiment could not be seen)
+- Below are the results
 
