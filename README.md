@@ -1,6 +1,7 @@
 # Domain Adaptation with Neural Style Transfer
 
 |이름|역할|
+|----|---|
 |안희상|데이터 정제, Neural Style Transfer, YOLOv5 train|
 |양원규|Neural Style Transfer, YOLOv5 train, 결과 분석|
 
