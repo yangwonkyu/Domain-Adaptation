@@ -77,3 +77,9 @@ All training runs were run at 100 epochs, 16 batches, pretrained(COCO-128) weigh
 - When validated on BDD100k, the results were a terrible mAP.50 .142. (The need to proceed on this experiment could not be seen)
 - Below are the results
 
+## Training / Validation:
+![image1](/DATA/exp_image/results.png)
+
+## Data Preprocess
+### Labels to YOLO format
+YOLO Format
